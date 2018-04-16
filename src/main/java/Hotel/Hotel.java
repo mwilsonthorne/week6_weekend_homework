@@ -26,9 +26,20 @@ public class Hotel {
         return this.dining_room;
     }
 
+    public ArrayList<BedRoom> getGuestroom() {
+        return guestroom;
+    }
+
     public int countRooms(){
         return this.guestroom.size();
     }
+
+//    public void addRoom(Room room){
+//        guestroom.add(room);
+//    }
+
+
+
 
     public void checkIn(Guest guest, Room room){
         room.addGuests(guest);
@@ -43,4 +54,12 @@ public class Hotel {
     }
 
 
+
+
 }
+
+
+//
+//    public void removeRoom(Room room){
+//        guestroom.remove(room);
+//    }

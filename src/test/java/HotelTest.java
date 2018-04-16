@@ -34,24 +34,33 @@ public class HotelTest {
         assertEquals("Drummond Lounge", hotel.getDiningRoom());
         }
 
+
+
     @Test
     public void guestRoomEmpty(){
         assertEquals(0, hotel.countRooms());
     }
 
+
+
+
+
+
+
+
     @Test
     public void canCheckInGuest(){
         hotel.checkIn(guest, room);
-        assertEquals(1, room.getGroupGuests().size());
+        assertEquals(1, room.countGuests());
 
     }
 
     @Test
     public void canCheckOutGuest(){
         hotel.checkIn(guest, room);
-        assertEquals(1, room.getGroupGuests().size());
+        assertEquals(1, room.countGuests());
         hotel.checkOut(guest, room);
-        assertEquals(0, room.getGroupGuests().size());
+        assertEquals(0, room.countGuests());
     }
 
     @Test
@@ -62,3 +71,18 @@ public class HotelTest {
 
 
 }
+
+//    @Test
+//    public void canAddRoom() {
+//        hotel.addRoom(room);
+//        assertEquals(1, hotel.countRooms());
+//
+//    }
+//
+//    @Test
+//    public void canRemoveRoom() {
+//        hotel.addRoom(room);
+//        assertEquals(1, hotel.countRooms());
+//        hotel.removeRoom(room);
+//        assertEquals(0, hotel.countRooms());
+//    }
