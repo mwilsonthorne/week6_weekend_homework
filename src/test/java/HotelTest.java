@@ -48,8 +48,7 @@ public class HotelTest {
     public void canAddRoom() {
         hotel.addRoom(room);
         assertEquals(1, hotel.countRooms());
-
-    }
+        }
 
     @Test
     public void canRemoveRoom() {
@@ -59,9 +58,18 @@ public class HotelTest {
         assertEquals(0, hotel.countRooms());
     }
 
+    //write a test which adds a room to the hotel
+    //then get guestrooms of that hotel
 
+    @Test
+    public void canGetGuestRooms(){
+        hotel.addRoom(room);
+        assertEquals(1, hotel.getGuestrooms().size());
+        assertEquals("Blue", hotel.getGuestrooms().get(0).getRoomName());
+        assertEquals(1, hotel.getGuestrooms().get(0).getRoomCapacity());
 
-
+    }
+    
 
     @Test
     public void canCheckInGuest(){

@@ -1,6 +1,5 @@
 package Hotel;
 
-import Abstract.Room;
 import People.Guest;
 import Room.BedRoom;
 
@@ -10,12 +9,12 @@ public class Hotel {
 
     private String conference_room;
     private String dining_room;
-    private ArrayList<BedRoom> guestroom;
+    private ArrayList<BedRoom> guestrooms;
 
     public Hotel(String conference_room, String dining_room){
         this.conference_room = conference_room;
         this.dining_room = dining_room;
-        this.guestroom = new ArrayList<>();
+        this.guestrooms = new ArrayList<>();
     }
 
     public String getConferenceRoom(){
@@ -26,20 +25,20 @@ public class Hotel {
         return this.dining_room;
     }
 
-    public ArrayList<BedRoom> getGuestroom() {
-        return this.guestroom;
+    public ArrayList<BedRoom> getGuestrooms() {
+        return this.guestrooms;
     }
 
     public int countRooms(){
-        return this.guestroom.size();
+        return this.guestrooms.size();
     }
 
     public void addRoom(BedRoom room){
-        this.guestroom.add(room);
+        this.guestrooms.add(room);
     }
 
     public void removeRoom(BedRoom room){
-        this.guestroom.remove(room);
+        this.guestrooms.remove(room);
     }
 
 
