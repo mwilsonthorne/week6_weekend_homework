@@ -44,6 +44,8 @@ public class Hotel {
 
     public void checkIn(Guest guest, BedRoom room){
         room.addGuests(guest);
+        int roomRate = room.getBedRoomRate();
+        guest.payRoomRate(roomRate);
     }
 
     public void checkOut(Guest guest, BedRoom room) {
@@ -53,6 +55,8 @@ public class Hotel {
     public ArrayList<Guest> getGuestsInRoom(BedRoom room){
         return room.getGroupGuests();
     }
+
+
 
 
 

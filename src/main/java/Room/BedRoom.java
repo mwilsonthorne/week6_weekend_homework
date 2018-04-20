@@ -1,6 +1,7 @@
 package Room;
 
 import Abstract.Room;
+import People.Guest;
 
 public class BedRoom extends Room {
 
@@ -26,6 +27,11 @@ public class BedRoom extends Room {
     public int getBedRoomRate(){
         return this.rate;
     }
+
+//    public int payRoomRate(Guest guest){
+//        return this.rate -= guest;
+//
+//    }
 
 
 }

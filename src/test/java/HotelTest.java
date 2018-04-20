@@ -69,7 +69,7 @@ public class HotelTest {
         assertEquals(1, hotel.getGuestrooms().get(0).getRoomCapacity());
 
     }
-    
+
 
     @Test
     public void canCheckInGuest(){
@@ -84,6 +84,18 @@ public class HotelTest {
         assertEquals(1, room.countGuests());
         hotel.checkOut(guest, room);
         assertEquals(0, room.countGuests());
+    }
+
+    @Test
+    public void canCheckInGuestAndCharge(){
+        //arranged in our before
+        // act - calling checkIn
+        hotel.checkIn(guest, room);
+        // assert
+        assertEquals(1, room.countGuests());
+        assertEquals(30, guest.getWallet());
+//      room.payRoomRate(guest);
+
     }
 
     @Test

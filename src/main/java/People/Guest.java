@@ -23,11 +23,11 @@ public class Guest {
     public int getWallet(){
         return this.wallet;
     }
-//
-//    public int payRoomRate(int rate){
-//        getWallet() -= getBedRoomRate(rate);
-//
-//    }
+
+    public int payRoomRate(int rate){
+        return this.wallet -= rate;
+
+    }
 
 
 }
